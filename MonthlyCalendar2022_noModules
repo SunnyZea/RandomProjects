@@ -81,7 +81,7 @@ for i in range(1, days + 1):
     if (start % 7) != 0:                        # if the current day is not Saturday, aka the last weekday column
         print("%.2d" % i + space, end = '')                        # printing the days you are on, in the same row
     else:                                       # if the current day is Saturday
-        print("%.2d" % i)                                        # printing the day you are on, on a different row because it's now a new week
+        print("%.2d" % i)                                        # printing the day you are on, on a different row because now it is a new week
 
 
 
