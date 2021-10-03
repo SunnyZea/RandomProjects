@@ -80,5 +80,5 @@ for i in range(1, days + 1):
     start += 1                         # adding one day to the start day so that each iteration in the loop you are moving up one start day as the day of the month gets larger              
     if (start % 7) != 0:                        # if the current day is not Saturday, aka the last weekday column
         print("%.2d" % i + space, end = '')                        # printing the days you are on, in the same row
-    else:                                       # if the current day is Saturday, so you have to print on a new row
-        print("%.2d" % i)                                        # printing the day you are on, on a different row
+    else:                                       # if the current day is Saturday
+        print("%.2d" % i)                                        # printing the day you are on, on a different row because it's now a new week
