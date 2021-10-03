@@ -82,3 +82,8 @@ for i in range(1, days + 1):
         print("%.2d" % i + space, end = '')                        # printing the days you are on, in the same row
     else:                                       # if the current day is Saturday
         print("%.2d" % i)                                        # printing the day you are on, on a different row because it's now a new week
+
+
+
+
+
