@@ -2,8 +2,11 @@
 #Print monthly calendar without modules
 #Sunshine Leeuwon, 10/03/2021
 
-ipt = int(input())
+# calling for user input on which month
+print('Please enter the number corresponding to the monthly calendar you would like to print: ')
+ipt = int(input()) 
 
+# table each month's related stats needed to do calculations
 if ipt == 1:
     month = 'January'
     start = 7
@@ -55,20 +58,27 @@ if ipt == 12:
 else:
      print('Month does not exist.')
      exit()
-    
+  
+# defining a space so that viewers know exactly how many spaces are used in the rest of the code
 space = ' '
 
+# printing heading
 print(4 * space + month + space + '2022')
 
+# printing column headings for days of the week
 print('Su' + space + 'Mo' + space + 'Tu' + space + 'We' + space + 'Th' + space + 'Fr' + space + 'Sa')
 
+# making the start day into the number of days before the start day
+# alternatively you could set start equal to the number of days before the start day at the beginning in the table, but this made more sense to me
 start = start - 1
 
+# print spaces at the beginning of the first line/week to set the cursor in the column of the correct start day
 print(3 * space * (start), end = '')
 
+# code to print the days of the month in calendar format
 for i in range(1, days + 1):
-    start += 1
-    if (start % 7) != 0:
-        print("%.2d" % i + space, end = '')
-    else:
-        print("%.2d" % i)
+    start += 1              # adding one day to the start day so that each iteration in the loop you are moving up one start day as the day of the month gets larger              
+    if (start % 7) != 0:                # if the current day is not Saturday, aka the last weekday column
+        print("%.2d" % i + space, end = '')                 # printing the days you are on, in the same row
+    else:                               # if the current day is Saturday, so you have to print on a new column
+        print("%.2d" % i)                                   # printing the day you are on, on a different row
