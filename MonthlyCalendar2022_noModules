@@ -52,6 +52,9 @@ if ipt == 12:
     month = 'December'
     start = 5
     days = 31
+else:
+     print('Month does not exist.')
+     exit()
     
 space = ' '
 
