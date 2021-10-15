@@ -1,0 +1,39 @@
+def sum_digits():
+    print('enter a number: ')
+    number = int(input())
+    
+   # s = 0
+    remainder1 = 0
+    numnum = 0
+    
+    dig2 = number % 10
+    
+    dig1 = 0
+    #print(dig2)
+    
+    while number > 9:
+        remainder1 = number//10
+        number = remainder1
+        dig1 = number % 10
+        answer = dig1
+        numnum = numnum  + answer
+        
+       # print('dig1')
+    #    print(dig1)
+        
+     #   print('numnum')
+      #  print(numnum)
+        
+       # print('answer')
+        #print(answer)
+        
+       # print(number)
+    
+    numnum2 = numnum + dig2
+    
+    #print('numnum2')
+    print(numnum2)
+    
+    
+    
+sum_digits()
